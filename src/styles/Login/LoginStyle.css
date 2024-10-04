@@ -1,0 +1,36 @@
+@import '../index.css';
+
+.header-img {
+    @apply
+    absolute 
+    top-0 
+    left-0 
+    w-fit
+    h-4/5
+    -z-10;
+}
+
+.login-form {
+    @apply
+    grid  
+    h-auto
+    w-96 
+    p-10  
+    mx-auto
+    rounded-lg
+    bg-white
+    shadow-md
+    shadow-blue-200;
+}
+
+.login-button {
+    @apply
+    mx-auto 
+    h-8 
+    w-40
+    mt-10
+    rounded-2xl
+    normal-case
+    py-2;
+}
+

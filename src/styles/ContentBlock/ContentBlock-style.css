@@ -1,0 +1,18 @@
+@import '../index.css';
+
+.header {
+    @apply
+    border-2
+    border-red-400
+    bg-blue-700;
+}
+
+.block-window {
+    @apply
+    border-2
+    border-blue-800
+    bg-black
+    w-96
+    h-96;
+}
+

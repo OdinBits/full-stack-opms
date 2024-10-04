@@ -1,5 +1,0 @@
-
-
-interface Window {
-    tableau: any; 
-}
