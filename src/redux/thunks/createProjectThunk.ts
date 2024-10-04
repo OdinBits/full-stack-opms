@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { CreateProject } from "../../../interfaces/IProjects";
-import axiosInstance from "../../axios/base.service";
+import { CreateProject } from "../../interfaces/IProjects";
+import axiosInstance from "../../services/base.service";
 
 const createProjectApi = createAsyncThunk(
     'createProjectApi',

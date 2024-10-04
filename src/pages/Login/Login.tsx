@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { logo, appBg } from '../../constants/images';
 import { TextFieldRewired } from '../../components';
 import { Formik } from 'formik';
-import login from '../../services/api/Authentication/loginApi.service';
+import login from '../../redux/thunks/loginApiThunk';
 import { Button, CircularProgress } from '@mui/material';
 import { loginFormSchema } from '../../validation/loginFormSchema';
 import '../../styles/Login/LoginStyle.css';

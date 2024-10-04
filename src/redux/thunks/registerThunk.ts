@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axiosInstance from "../../axios/base.service";
+import axiosInstance from "../../services/base.service";
 import { iAppResponse } from "../../shared/interfaces/iAppResponse";
 
 export const register = createAsyncThunk(

@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import MasterPage from '../layouts/AppLayout/AppLayout';
+import MasterPage from '../layouts/MasterContainer';
 import { Login, Registration, Dashboard, ProjectLists, CreateNewProject } from '../pages';
 import { useAppSelector } from '../hooks';
 

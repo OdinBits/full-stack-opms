@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { IProtectedRouteProps } from '../../interfaces/IProtectedRoutProps';
+import { IProtectedRouteProps } from '../interfaces/IProtectedRoutProps';
 
 const ProtectedRoute: React.FC<IProtectedRouteProps> = ({ element, auth, role, requiredRole }) => {
     // If user is not authenticated, redirect to login

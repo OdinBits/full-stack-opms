@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { navLinks } from '../../../interfaces/iNavLinks';
-import { popHistory, setNavLink, updateHistory } from '../../../store/Navigation/NavSlice';
+import { popHistory, setNavLink, updateHistory } from '../../../redux/slices/NavSlice';
 
 const HeaderBlock = () => {
     const [pageInfo, setPageInfo] = React.useState('');

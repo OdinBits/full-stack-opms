@@ -1,5 +1,5 @@
 import { CreateProject, initialCreateProjectApiState } from "../../interfaces/IProjects"
-import createProjectApi from "../../services/api/Projects/createProjectApi.service"
+import createProjectApi from "../thunks/createProjectThunk"
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 

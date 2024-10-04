@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { initialLoginResponse, LoginFields, LoginResponse } from "../../../interfaces/iLoginState";
-import { formatErrorResponse } from "../../../utils/formateErrorResponse";
-import axiosInstance from "../../axios/base.service";
+import { initialLoginResponse, LoginFields, LoginResponse } from "../../interfaces/iLoginState";
+import { formatErrorResponse } from "../../utils/formateErrorResponse";
+import axiosInstance from "../../services/base.service";
 
 const loginApi = createAsyncThunk(
     'loginApi',

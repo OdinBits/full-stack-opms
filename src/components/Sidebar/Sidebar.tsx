@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../styles/Sidebar/Sidebar-style.css';
 
 const Sidebar = () => {

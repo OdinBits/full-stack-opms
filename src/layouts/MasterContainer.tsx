@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ContentBlock, Sidebar } from '../../components';
+import { ContentBlock, Sidebar } from '../components';
 
-const MasterPage = () => {
+const MasterContainer = () => {
   // Create a ref for the container to animate
   const masterPageRef = useRef(null);
 
@@ -23,4 +23,4 @@ const MasterPage = () => {
   );
 };
 
-export default MasterPage;
+export default MasterContainer;

@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 //import { iUser } from "./logoutSlice";
 import { initialRefreshTokenState } from "../../interfaces/iRefreshTokent";
 //import { jwtDecode } from "jwt-decode";
-import refreshTokenApi from "../../services/api/Authentication/refreshTokenApi.service";
+import refreshTokenApi from "../thunks/refreshTokenThunk";
 import { iUser } from "../../interfaces/iRefreshTokent";
 import { jwtDecode } from "jwt-decode";
 import { PayloadAction } from "@reduxjs/toolkit";
