@@ -1,8 +1,8 @@
-import Dashboard from "./Dashboard/Dashboard";
-import Login from './Login/Login';
-import CreateNewProject from "./CreateNewProject/CreateNewProject";
-import ProjectLists from "./ProductLists/ProjectLists";
-import Registration from "./Registration/Registration";
+import Dashboard from "./Dashboard";
+import Login from './Login';
+import CreateNewProject from "./CreateNewProject";
+import ProjectLists from "./ProjectLists";
+import Registration from "./Registration";
 
 export {
     Dashboard,

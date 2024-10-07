@@ -1,4 +1,4 @@
-import { logout } from '../../constants/images'
+import { logout } from '../constants/images'
 //import { useAppDispatch } from '../../hooks'
 
 const Logout = () => {

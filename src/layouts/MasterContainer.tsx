@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ContentBlock, Sidebar } from '../components';
+import { Sidebar } from '../components';
+import ContentBlock from './ContentBlock';
 
 const MasterContainer = () => {
   // Create a ref for the container to animate

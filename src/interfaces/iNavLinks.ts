@@ -2,9 +2,9 @@ import { inActiveDashboard, activeDashboard, activeProjectLists, inActiveProject
 
 
 export const navLinks = [
-    { label: 'Dashboard', path: '/Dashboard', image: inActiveDashboard, activeImage: activeDashboard },
-    { label: 'Project Listing', path: '/Table', image: inActiveProjectLists, activeImage: activeProjectLists },
-    { label: 'Create Project', path: '/CreateProject', image: inActiveNewProject, activeImage: activeNewProject },
+    { label: 'Dashboard', path: 'dashboard', image: inActiveDashboard, activeImage: activeDashboard },
+    { label: 'Project Listing', path: 'project-lists', image: inActiveProjectLists, activeImage: activeProjectLists },
+    { label: 'Create Project', path: 'create-new-project', image: inActiveNewProject, activeImage: activeNewProject },
 ];
 
 export interface ActiveLinks {

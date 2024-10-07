@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import { logo, appBg } from '../../constants/images';
-import { TextFieldRewired } from '../../components';
+import { logo, appBg } from '../constants/images';
+import { TextFieldRewired } from '../components';
 import { Formik } from 'formik';
-import login from '../../redux/thunks/loginApiThunk';
+import login from '../redux/thunks/loginApiThunk';
 import { Button, CircularProgress } from '@mui/material';
-import { loginFormSchema } from '../../validation/loginFormSchema';
-import '../../styles/Login/LoginStyle.css';
-import { useAppDispatch, useAppSelector } from '../../hooks';
+import { loginFormSchema } from '../validation/loginFormSchema';
+import { useAppDispatch, useAppSelector } from '../hooks';
 import { useNavigate } from 'react-router-dom';
-import { LoginFields, initialLoginFields, cardProp } from '../../interfaces/iLoginState';
+import { LoginFields, initialLoginFields, cardProp } from '../interfaces/ILoginState';
+import '../styles/LoginStyle.css';
 
 const Login = () => {
     const [notificationMessage, setNotificationMessage] = React.useState<string | undefined>(undefined);

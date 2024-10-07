@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 const TextFieldRewired: React.FC<InputState> = ({ fields, props, sx }) => {
-    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword(!showPassword);
 
     return (

@@ -1,12 +1,11 @@
-import Sidebar from "./Sidebar/Sidebar";
-import Logout from "./Logout/Logout";
-import TextFieldRewired from "./TextFieldRewired/TextFieldRewired";
-import { ContentBlock, HeaderBlock } from "../layouts";
+import Sidebar from "./Sidebar";
+import Logout from "./Logout";
+import TextFieldRewired from "./TextFieldRewired";
+import BackButton from "./BackButton";
 
 export {
     Sidebar,
-    ContentBlock,
-    HeaderBlock,
     Logout,
-    TextFieldRewired
+    TextFieldRewired,
+    BackButton
 };

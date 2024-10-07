@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { LoginResponse, initialLoginResponse, initialLoginState } from "../../interfaces/iLoginState";
+import { LoginResponse, initialLoginResponse, initialLoginState } from "../../interfaces/ILoginState";
 import loginApi from "../thunks/loginApiThunk";
 
 // Adjust the type of your state and response to accommodate rejected cases properly

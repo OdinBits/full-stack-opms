@@ -1,12 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
 import {  persistStore } from "redux-persist";
-//import logoutReducer from "./store/Authentication/logoutSlice";
-import navigationReducer from './slices/NavSlice';
-import refreshTokenReducer from "./slices/refreshTokenSlice";
 import persistReducer from "redux-persist/es/persistReducer";
-import loginSlice from './slices/loginSlice';
-import createProjectReducer  from "./slices/CreateProjectSlice";
+import { NavReducer, loginReducer, CreateProjectReducer, PageNameReducer } from "./slices";
 
 const persistConfig = {
     key: 'root',
@@ -14,10 +10,10 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-    navLinkStates: navigationReducer,
-    refreshToken: refreshTokenReducer,
-    loginState: loginSlice,
-    createProject: createProjectReducer
+    navLinkStates: NavReducer,
+    loginState: loginReducer,
+    createProject: CreateProjectReducer,
+    pageName: PageNameReducer
 })
 
 const persistedReducer = persistReducer(persistConfig,rootReducer);

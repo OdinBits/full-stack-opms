@@ -56,12 +56,12 @@ export const initialLoginResponse: LoginResponse = {
 }
 
 // iLoginState interface
-export interface iLoginState {
+export interface ILoginState {
     loading: boolean;
     data: ServiceResponse<LoginResponse> | null; // Ensure it matches your intended structure
 }
 
-export const initialLoginState: iLoginState = {
+export const initialLoginState: ILoginState = {
     loading: false,
     data: null,
 }

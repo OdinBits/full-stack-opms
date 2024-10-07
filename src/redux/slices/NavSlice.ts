@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { initialActiveLink } from "../../interfaces/iNavLinks";
+import { initialActiveLink } from "../../interfaces/INavLinks";
 
 const navigationSlice = createSlice({
     name: 'navLinks',

@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 // import { refreshToken } from "../../api/Authentication/auth.service";
 //import { RootState } from "../../Store";
 //import { iUser } from "./logoutSlice";
-import { initialRefreshTokenState } from "../../interfaces/iRefreshTokent";
+import { initialRefreshTokenState } from "../../interfaces/IRefreshTokent";
 //import { jwtDecode } from "jwt-decode";
 import refreshTokenApi from "../thunks/refreshTokenThunk";
-import { iUser } from "../../interfaces/iRefreshTokent";
+import { iUser } from "../../interfaces/IRefreshTokent";
 import { jwtDecode } from "jwt-decode";
 import { PayloadAction } from "@reduxjs/toolkit";
 
