@@ -7,9 +7,9 @@ const ContentBlock = () => {
 
     const pageName = useAppSelector(state => state.pageName.pageName);
     return (
-        <div>
-            <img src={headerBg}/>
-            <h1>{pageName}</h1>
+        <div className='relavtive'>
+            <img src={headerBg} className='border-2 border-blue-950'/>
+            <h1 className='absolute top-14 ml-9'>{pageName}</h1>
             <img src={logo} alt='logo' className='logo-style' />
 
             <div className='block-window'>

@@ -5,14 +5,13 @@
     border-2
     border-blue-100;
 
-    /* @screen md {
-        @apply
-        border-blue-500
-        border-2;
-    } */
-/* 
-    @screen lg {
-        @apply
-        border-black;
-    } */
+    @apply 
+    md:min-h-screen 
+    w-[4%]
+    flex 
+    justify-center 
+    items-center 
+    flex-col 
+    gap-10; 
 }
+

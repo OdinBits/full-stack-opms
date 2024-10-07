@@ -15,7 +15,7 @@ const Sidebar = () => {
     };
 
     return (
-        <div className="block-container">
+        <div className="block-container ">
             {navLinks.map((link, index) => (
                 <div key={index} className={`nav-item ${isActive === index ? 'active' : ''}`}>
                     {isActive === index && <div className="Indicator" />}
@@ -25,7 +25,7 @@ const Sidebar = () => {
                         to={link.path}
                     >
                         <img
-                            className="navtag"
+                            className="navtag mx-auto w-8"
                             src={isActive === index ? link.activeImage : link.image}
                             alt={link.label}
                         />
