@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { logo, appBg } from '../constants/images';
 import { TextFieldRewired } from '../components';
 import { Formik } from 'formik';
-import login from '../redux/thunks/loginApiThunk';
+import loginThunk from '../redux/thunks/loginThunk';
 import { Button, CircularProgress } from '@mui/material';
 import { loginFormSchema } from '../validation/loginSchema';
 import { useAppDispatch, useAppSelector } from '../hooks';
@@ -12,7 +12,6 @@ import styles from '../styles/login.module.css';
 
 const Login = () => {
     const [notificationMessage, setNotificationMessage] = React.useState<string | undefined>(undefined);
-    
     const formikRef = useRef<unknown>(null);
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
@@ -22,7 +21,7 @@ const Login = () => {
 
     // Handle form submission
     const handleSubmit = async (values: LoginFields) => {
-        await dispatch(login(values));
+        await dispatch(loginThunk(values));
     };
 
     // Handle side effects for login messages
@@ -42,7 +41,6 @@ const Login = () => {
         <div className={styles.loginContent}>
             <img src={logo} alt='logo' className={styles.loginLogo} />
             <h5 className={styles.loginTitle}>Project Management System</h5>
-
             <Formik
                 initialValues={initialLoginFields}
                 validationSchema={loginFormSchema}
@@ -77,7 +75,6 @@ const Login = () => {
                     );
                 }}
             </Formik>
-
             <div className={styles.messageContainer}>
                 <h5 className={`${styles.messageText} ${notificationMessage ? styles.visibleMessage : styles.hiddenMessage} 
                     ${isUser === false ? styles.errorMessage : isUser === true ? styles.successMessage : ''}`}>

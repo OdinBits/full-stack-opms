@@ -1,37 +1,37 @@
-export interface CreateProject {
-    projectTheme?: string; // Optional field
-    reason?: string;       // Optional field
-    type?: string;         // Optional field
-    division?: string;     // Optional field
-    category?: string;     // Optional field
-    priority?: string;     // Optional field
-    department?: string;   // Optional field
-    startDate?: Date;      // Optional field
-    endDate?: Date;        // Optional field
-    location?: string;     // Optional field
-    userId: string;        // Required field
+export interface CreateProjectFields {
+    projectTheme?: string; 
+    reason?: string;       
+    type?: string;         
+    division?: string;     
+    category?: string;     
+    priority?: string;     
+    department?: string;   
+    startDate?: Date;      
+    endDate?: Date;        
+    location?: string;     
+    userId: string;        
 }
 
-export const initialCreateProject: CreateProject = {
-    projectTheme: '',      // Initial value for optional field
-    reason: '',            // Initial value for optional field
-    type: '',              // Initial value for optional field
-    division: '',          // Initial value for optional field
-    category: '',          // Initial value for optional field
-    priority: '',          // Initial value for optional field
-    department: '',        // Initial value for optional field
-    startDate: undefined,  // Initial value for optional field
-    endDate: undefined,    // Initial value for optional field
-    location: '',          // Initial value for optional field
-    userId: ''             // Initial value for required field
+export const initialCreateProject: CreateProjectFields = {
+    projectTheme: '',      
+    reason: '',            
+    type: '',              
+    division: '',          
+    category: '',          
+    priority: '',          
+    department: '',        
+    startDate: undefined,  
+    endDate: undefined,    
+    location: '',          
+    userId: ''             
 };
 
-export interface CreateProjectApiState {
+export interface CreateProjectState {
     loading: boolean;
-    data: CreateProject;
+    data: CreateProjectFields;
 }
 
-export const initialCreateProjectApiState: CreateProjectApiState = {
+export const initialCreateProjectState: CreateProjectState = {
     loading: false,
     data: initialCreateProject  // Corrected from 'date' to 'data'
 };

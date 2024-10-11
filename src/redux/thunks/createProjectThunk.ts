@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { CreateProject } from "../../interfaces/IProjects";
 import axiosInstance from "../../services/base.service";
+import { CreateProjectFields } from "../../interfaces/IProjects";
 
-const createProjectApi = createAsyncThunk(
-    'createProjectApi',
-    async(payload: CreateProject) => {
+const createProjectThunk = createAsyncThunk(
+    'createProjectThunk',
+    async(payload: CreateProjectFields) => {
         try {
             const response = 
             await axiosInstance.post('projects/create', {payload})
@@ -16,4 +16,4 @@ const createProjectApi = createAsyncThunk(
     }
 )
 
-export default createProjectApi;
+export default createProjectThunk;

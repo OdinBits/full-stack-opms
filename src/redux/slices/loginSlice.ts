@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { LoginResponse, initialLoginResponse, initialLoginState } from "../../interfaces/ILoginState";
-import loginApi from "../thunks/loginApiThunk";
+import loginThunk from "../thunks/loginThunk";
 
 // Adjust the type of your state and response to accommodate rejected cases properly
 
@@ -10,17 +10,17 @@ export const loginSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(loginApi.pending, (state) => {
+            .addCase(loginThunk.pending, (state) => {
                 state.loading = true;
             })
             .addCase(
-                loginApi.fulfilled,
+                loginThunk.fulfilled,
                 (state, action: PayloadAction<ServiceResponse<LoginResponse>>) => {
                     state.loading = false;
                     state.data = action.payload;
                 }
             )
-            .addCase(loginApi.rejected, (state, action) => {
+            .addCase(loginThunk.rejected, (state, action) => {
                 state.loading = false;
                 // Handle cases where action.payload is undefined or has an error
                 state.data = action.payload

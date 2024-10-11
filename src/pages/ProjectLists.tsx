@@ -1,10 +1,10 @@
 import * as React from 'react';
-import gsap from 'gsap';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { Button, Pagination } from '@mui/material';
 import { dummyProjects } from '../types/dummyProject';
-import SearchField from '../components/SearchField';
+import { SearchField } from '../components';
 import styles from '../styles/projectList.module.css';
+import gsap from 'gsap';
 
 const ProjectLists = () => {
     const [page, setPage] = React.useState(1);

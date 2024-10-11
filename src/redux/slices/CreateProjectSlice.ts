@@ -1,22 +1,22 @@
-import { CreateProject, initialCreateProjectApiState } from "../../interfaces/IProjects"
-import createProjectApi from "../thunks/createProjectThunk"
+import { CreateProjectFields, initialCreateProjectState } from "../../interfaces/IProjects"
+import createProjectThunk from "../thunks/createProjectThunk"
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 const createProjectSlice = createSlice({
     name: "createProjectSlice",
-    initialState: initialCreateProjectApiState,
+    initialState: initialCreateProjectState,
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(createProjectApi.pending, (state) => {
+            .addCase(createProjectThunk.pending, (state) => {
                 state.loading = true;
             })
-            .addCase(createProjectApi.fulfilled, (state, action: PayloadAction<CreateProject>) => {
+            .addCase(createProjectThunk.fulfilled, (state, action: PayloadAction<CreateProjectFields>) => {
                 state.loading = false;
                 state.data = action.payload
             })
-            .addCase(createProjectApi.rejected, (state) => {
+            .addCase(createProjectThunk.rejected, (state) => {
                 state.loading = false;
             });
     }

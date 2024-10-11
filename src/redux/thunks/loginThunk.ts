@@ -3,8 +3,8 @@ import { initialLoginResponse, LoginFields, LoginResponse } from "../../interfac
 import { formatErrorResponse } from "../../utils/formateErrorResponse";
 import axiosInstance from "../../services/base.service";
 
-const loginApi = createAsyncThunk(
-    'loginApi',
+const loginThunk = createAsyncThunk(
+    'loginThunk',
     async (payload: LoginFields, { rejectWithValue }) => {
         try {
             const response = await axiosInstance.post<ServiceResponse<LoginResponse>>(
@@ -20,4 +20,4 @@ const loginApi = createAsyncThunk(
     }
 );
 
-export default loginApi;
+export default loginThunk;

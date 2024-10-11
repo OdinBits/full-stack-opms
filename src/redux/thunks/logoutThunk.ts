@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../services/base.service";
 import { iLogoutResponse } from "../../shared/interfaces/iAuthState";
 
-export const logout = createAsyncThunk(
+const logoutThunk = createAsyncThunk(
     'auth/logout',
     async () => {
         try {
@@ -17,3 +17,5 @@ export const logout = createAsyncThunk(
         }
     }
 );
+
+export default logoutThunk;
