@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Sidebar } from '../components';
 import ContentBlock from './ContentBlock';
+import styles from '../styles/masterContainer.module.css';
 
 const MasterContainer = () => {
   // Create a ref for the container to animate
@@ -17,7 +18,7 @@ const MasterContainer = () => {
   }, []);
 
   return (
-    <div className='flex' ref={masterPageRef}>
+    <div className={styles.masterContainer} ref={masterPageRef}>
       <Sidebar />
       <ContentBlock />
     </div>

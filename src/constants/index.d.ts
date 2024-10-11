@@ -9,4 +9,12 @@ declare global {
     const defaultServiceResponse: <T>(data: T | null) => ServiceResponse<T>;
 }
 
+declare global {
+    interface SearchInputProps {
+        value: string;
+        setQuery: (query: string) => void;
+        placeholder?: string;
+    }
+}
+
 export {};

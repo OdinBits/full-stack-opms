@@ -1,8 +1,8 @@
-import CreateProjectReducer from './CreateProjectSlice';
+import CreateProjectReducer from './createProjectSlice';
 import loginReducer from './loginSlice';
-import NavReducer from './NavSlice';
-import PageNameReducer from './PageNameSlice';
-import RegisterReducer from './RegisterSlice';
+import NavReducer from './navSlice';
+import PageNameReducer from './pageNameSlice';
+import RegisterReducer from './registerSlice';
 
 export {
     CreateProjectReducer,

@@ -1,0 +1,42 @@
+@import './index.css';
+
+.contentBlock {
+    @apply 
+    relative
+    bg-slate-100;
+}
+
+.headerBg {
+    @apply 
+    w-full 
+    h-auto 
+    object-cover;
+    
+}
+
+.title {
+    @apply 
+    absolute 
+    my-auto
+    ml-7 
+    top-9 
+    text-2xl 
+    flex
+    h-fit
+    p-2
+    gap-2;
+}
+
+.logo {
+    @apply 
+    absolute 
+    mx-auto 
+    w-24 
+    left-2/4 
+    top-6 
+    transform -translate-x-1/2;
+}
+
+.outlet {
+    @apply w-full px-5 -mt-10 mx-auto;
+}

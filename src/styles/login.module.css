@@ -1,0 +1,58 @@
+@import './index.css';
+
+.loginContainer {
+    @apply 
+    h-svh;
+}
+
+.headerImage {
+    @apply absolute top-0 left-0 w-fit h-4/5 -z-10;
+}
+
+.loginContent {
+    @apply flex flex-col items-center gap-8 relative mt-40 mb-5;
+}
+
+.loginLogo {
+    @apply w-32 h-auto; 
+}
+
+.loginTitle {
+    @apply text-center text-xl text-zinc-900;
+}
+
+.loginForm {
+    @apply grid h-auto w-96 p-10 mx-auto rounded-lg bg-white shadow-md shadow-blue-200;
+}
+
+.formHeading {
+    @apply text-center mb-5 text-xl text-zinc-700;
+}
+
+.loginButton {
+    @apply mx-auto h-8 w-40 mt-10 rounded-2xl normal-case py-2;
+}
+
+.messageContainer {
+    @apply mt-4;
+}
+
+.messageText {
+    @apply transition-all duration-500;
+}
+
+.errorMessage {
+    @apply text-red-500;
+}
+
+.successMessage {
+    @apply text-green-500;
+}
+
+.hiddenMessage {
+    @apply opacity-0;
+}
+
+.visibleMessage {
+    @apply opacity-100;
+}

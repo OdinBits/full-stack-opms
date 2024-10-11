@@ -1,21 +1,38 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { navLinks } from '../interfaces/INavLinks';
-import { setNavLink } from '../redux/slices/NavSlice';
-import { setPageName } from '../redux/slices/PageNameSlice';
-import '../styles/SidebarStyle.css';
+import { setNavLink, updateHistory } from '../redux/slices/navSlice';
+import styles from '../styles/sidebar.module.css';
+import { useEffect } from 'react';
 
 const Sidebar = () => {
     const dispatch = useAppDispatch();
-    const { isActive } = useAppSelector(state => state.navLinkStates);
+    const location = useLocation();
+    const { isActive, history } = useAppSelector(state => state.navLinks);
+
+    // Sync the active link based on the current route
+    useEffect(() => {
+        const currentPath = location.pathname.replace('/app/', '');
+        const activeIndex = navLinks.findIndex(link => link.path === currentPath);
+
+        if (activeIndex !== -1 && activeIndex !== isActive) {
+            dispatch(setNavLink(activeIndex));
+        }
+    }, [location.pathname, isActive, dispatch]);
 
     const handleNavLinkClick = (index: number) => {
-        dispatch(setNavLink(index));
-        dispatch(setPageName(navLinks[index].label)); // Dispatch setPageName action
+        const currentPath = location.pathname.replace('/app/', '');
+
+        // Before navigating, update the history with the current path
+        if (history[history.length - 1] !== currentPath) {
+            dispatch(updateHistory(currentPath)); // Save current path before navigating
+        }
+
+        dispatch(setNavLink(index)); // Update active link
     };
 
     return (
-        <div className="block-container ">
+        <div id='Sidebar' className={styles.sidebar}>
             {navLinks.map((link, index) => (
                 <div key={index} className={`nav-item ${isActive === index ? 'active' : ''}`}>
                     {isActive === index && <div className="Indicator" />}
@@ -25,7 +42,7 @@ const Sidebar = () => {
                         to={link.path}
                     >
                         <img
-                            className="navtag mx-auto w-8"
+                            className="navtag mx-auto w-6"
                             src={isActive === index ? link.activeImage : link.image}
                             alt={link.label}
                         />

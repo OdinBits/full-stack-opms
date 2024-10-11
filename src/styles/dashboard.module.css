@@ -1,0 +1,44 @@
+@import './index.css';
+
+/* Main Dashboard Wrapper */
+.dashboard {
+    @apply 
+    relative 
+    rounded-xl;
+}
+
+/* Container for status cards */
+.statusCardContainer {
+    @apply 
+    flex 
+    gap-7 ;
+}
+
+/* Individual status card */
+.statusCard {
+    @apply 
+    flex 
+    flex-col 
+    gap-2 
+    border-r-8 
+    border-blue-500 
+    w-full 
+    rounded-md 
+    p-3 
+    shadow-custom-blue
+    bg-white ;
+}
+
+/* Status title inside the card */
+.statusCardTitle {
+    @apply 
+    text-xl;
+}
+
+/* Status number inside the card */
+.statusCardNumber {
+    @apply 
+    text-3xl 
+    font-bold 
+    text-blue-950;
+}

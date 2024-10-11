@@ -1,13 +1,14 @@
 @import './index.css';
 
-.block-container {
+.sidebar {
     @apply
     border-2
     border-blue-100;
 
     @apply 
     md:min-h-screen 
-    w-[4%]
+    max-w-[4%]
+    min-w-16
     flex 
     justify-center 
     items-center 

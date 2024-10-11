@@ -10,7 +10,7 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-    navLinkStates: NavReducer,
+    navLinks: NavReducer,
     loginState: loginReducer,
     createProject: CreateProjectReducer,
     pageName: PageNameReducer

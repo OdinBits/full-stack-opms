@@ -1,12 +1,26 @@
-import React from 'react'
+import React from 'react';
+import styles from '../styles/dashboard.module.css';
 
 const Dashboard = () => {
-    return (
-        <div className='border-2 w-full flex p-2 justify-between'>
-            <div className='bg-blue-950 w-96 h-96 border-2 border-red-400 flex justify-center items-center'> <div className='border-2 w-52 h-52'> div 1 </div> </div>
-            <div className='bg-blue-950 w-96 h-96 border-2 border-red-400 flex justify-center items-center'> <div className='border-2 w-52 h-52'> div 1 </div> </div>
-        </div>
-    )
-}
+    const cards = [
+        { status: 'Running', numbers: 20 },
+        { status: 'Delayed', numbers: 30 },
+        { status: 'Cancelled', numbers: 60 },
+        { status: 'Closed', numbers: 60 }
+    ];
 
-export default Dashboard
+    return (
+        <div id="dashboard" className={styles.dashboard}>
+            <div className={styles.statusCardContainer}>
+                {cards.map((item, index) => (
+                    <div key={index} className={styles.statusCard}>
+                        <span className={styles.statusCardTitle}>{item.status}</span>
+                        <span className={styles.statusCardNumber}>{item.numbers}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Dashboard;

@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../hooks';
 import { navLinks } from '../interfaces/INavLinks';
-import { updateHistory } from '../redux/slices/NavSlice';
+import { updateHistory } from '../redux/slices/navSlice';
 import { BackButton } from '../components';
 
 

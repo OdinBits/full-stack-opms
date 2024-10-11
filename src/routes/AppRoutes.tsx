@@ -4,26 +4,24 @@ import { Login, Registration, Dashboard, ProjectLists, CreateNewProject } from '
 import { useAppSelector } from '../hooks';
 
 const AppRoutes = () => {
-    // Get the user authentication state
     const isUser = useAppSelector(state => state.loginState.data?.data?.isUser);
 
-    // Define route objects
     return [
         {
             path: '/',
-            element: <Navigate to={isUser ? "/app/dashboard" : "/login"} />, // Redirect to login or dashboard
+            element: <Navigate to={isUser ? "/app/dashboard" : "/login"} />,
         },
         {
             path: '/login',
-            element: !isUser ? <Login /> : <Navigate to="/app/dashboard" />, // Only allow login if not authenticated
+            element: !isUser ? <Login /> : <Navigate to="/app/dashboard" />,
         },
         {
             path: '/login/registration',
-            element: !isUser ? <Registration /> : <Navigate to="/app/dashboard" />, // Redirect to dashboard if already authenticated
+            element: !isUser ? <Registration /> : <Navigate to="/app/dashboard" />,
         },
         {
             path: '/app',
-            element: isUser ? <MasterPage /> : <Navigate to="/login" />, // MasterPage protected route
+            element: isUser ? <MasterPage /> : <Navigate to="/login" />,
             children: [
                 {
                     path: 'dashboard',
@@ -41,7 +39,7 @@ const AppRoutes = () => {
         },
         {
             path: '*',
-            element: <Navigate to={isUser ? "/app/dashboard" : "/login"} />, // Catch-all route
+            element: <Navigate to={isUser ? "/app/dashboard" : "/login"} />,
         },
     ];
 };

@@ -1,0 +1,20 @@
+@import './index.css';
+
+.projectList {
+    @apply 
+    h-fit 
+    overflow-x-hidden
+    w-full;
+}
+
+.dataGrid {
+    @apply 
+    border-none ;
+}
+
+.pagination {
+    @apply 
+    w-fit 
+    mt-6
+    mx-auto;
+}
